@@ -18,25 +18,20 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 @AutoConfigureMockMvc
 public class ClienteControllerTest {
 	
-    @Autowired
-    private MockMvc mockMvc;
-
-	@Test
-	public void testeCadastroCliente () throws Exception {
-		URI uri = new URI("/clientes");
-        String json = "{\"cpf\":\"12345678901\",\"nome\":\"Maria\"}";
-        
-        mockMvc
-        .perform(MockMvcRequestBuilders
-                .post(uri)
-                .content(json)
-                .contentType(MediaType.APPLICATION_JSON))
-        .andExpect(MockMvcResultMatchers
-                .status()
-                .is(201));
-       
-		
-	}
+	/*
+	 * @Autowired private MockMvc mockMvc;
+	 * 
+	 * @Test public void testeCadastroCliente () throws Exception { URI uri = new
+	 * URI("/clientes"); String json =
+	 * "{\"cpf\":\"12345678901\",\"nome\":\"Maria\"}";
+	 * 
+	 * mockMvc .perform(MockMvcRequestBuilders .post(uri) .content(json)
+	 * .contentType(MediaType.APPLICATION_JSON)) .andExpect(MockMvcResultMatchers
+	 * .status() .is(201));
+	 * 
+	 * 
+	 * }
+	 */
 	
 
 }
